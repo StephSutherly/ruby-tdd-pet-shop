@@ -28,21 +28,54 @@ def stock_count(pet_shop)
   return pet_shop[:pets].count
 end
 
-#8
+#8 & 9
 def pets_by_breed(pet_shop, breed)
-
+  matching_breeds = []
+  for pet in pet_shop[:pets]
+    if pet[:breed] == breed
+      matching_breeds << pet
+    end
+  end
+  return matching_breeds
 end
-# def test_all_pets_by_breed__found
-#   pets = pets_by_breed(@pet_shop, "British Shorthair")
-#   assert_equal(2, pets.count)
+
+#10(&11?) in progress
+def find_pet_by_name(pet_shop, pet_name)
+  for pet in pet_shop[:pets]
+    if pet[:name] == pet_name
+     return pet
+    # elsif pet[:name] != searched_pet_name
+    #   pet = []
+   end
+ end
+end
+
+#12 in progress
+# def remove_pet_by_name(pet_shop, pet_name)
+#     for pet in pet_shop[:pets]
+#       if pet[:name] == [pet_name]
+#         pet_shop[:pet].delete(pet)
+#       end
+#     end
 # end
 
 #14
 def customer_cash(customer)
-
+  return customer[:cash]
 end
 
-  # def test_customer_cash
-  #   cash = customer_cash(@customers[0])
-  #   assert_equal(1000, cash)
-  # end
+#15
+def remove_customer_cash(customer, less_cash)
+  customer[:cash] -= less_cash
+  return customer[:cash]
+end
+
+#16
+def customer_pet_count(customer)
+  return customer[:pets]
+end
+
+#17
+def add_pet_to_customer(customer, new_pet)
+  customer[:pets] << new_pet
+end
