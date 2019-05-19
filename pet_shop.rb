@@ -39,7 +39,7 @@ def pets_by_breed(pet_shop, breed)
   return matching_breeds
 end
 
-#10(&11?) in progress
+#10(&11?) In progress
 def find_pet_by_name(pet_shop, pet_name)
   for pet in pet_shop[:pets]
     if pet[:name] == pet_name
@@ -50,13 +50,18 @@ def find_pet_by_name(pet_shop, pet_name)
  end
 end
 
-#12 in progress
+#12 In progress
 # def remove_pet_by_name(pet_shop, pet_name)
 #     for pet in pet_shop[:pets]
 #       if pet[:name] == [pet_name]
 #         pet_shop[:pet].delete(pet)
 #       end
 #     end
+# end
+
+#13 In progress
+# def add_pet_to_stock(pet_shop, new_pet)
+#   return pet_shop[:pets].push(new_pet)
 # end
 
 #14
@@ -70,12 +75,12 @@ def remove_customer_cash(customer, less_cash)
   return customer[:cash]
 end
 
-#16
+#16 Was working now not
 def customer_pet_count(customer)
   return customer[:pets]
 end
 
-#17
+#17 Was working now not
 def add_pet_to_customer(customer, new_pet)
   customer[:pets] << new_pet
 end
